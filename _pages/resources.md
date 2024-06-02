@@ -1,12 +1,12 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: A growing collection of your cool projects.
+title: RESOURCES
+permalink: /resources/
+description: 研究・ゼミ活動に役立つ（かもしれない）参考情報のコレクション
 nav: true
-nav_order: 3
-display_categories: [work, fun]
-horizontal: false
+nav_order: 4
+display_categories: 
+horizontal: true 
 ---
 
 <!-- pages/projects.md -->
