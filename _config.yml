@@ -301,7 +301,7 @@ display_categories: #["blockquotes"] # these categories will be displayed on the
 
 scholar:
   last_name: ["Kato","加藤言人"]
-  first_name: ["Gento","加藤言人"]
+  first_name: ["Gento",""]
 
   style: apa
   locale: en
