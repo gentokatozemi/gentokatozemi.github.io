@@ -12,7 +12,7 @@ profile:
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
+social: true # includes social icons at the bottom of the page
 ---
 
 今の政治について「どうするべきか」を考えるためには、<u>今の政治が「なぜ・どのように動いているのか」</u>について検討する必要があります。現状を十分に検討せずに提言・提案を行えば、方向が間違っていたり、実現可能性が低かったりする可能性があるからです。
