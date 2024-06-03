@@ -2,7 +2,7 @@
 layout: about
 title: HOME
 permalink: /
-subtitle: <a href='#'>明治大学政治経済学部</a>（専門：政治過程論、政治学方法論）
+subtitle: <a href='https://www.meiji.ac.jp/seikei/faculty/01/katogento.html'>明治大学政治経済学部</a>（専門：政治過程論、政治学方法論）
 
 profile:
   align: right
