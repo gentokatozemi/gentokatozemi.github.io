@@ -81,6 +81,7 @@ jobs:
         run: |
           pip3 install --upgrade jupyter
           export JEKYLL_ENV=production
+          bundle update rexml
           bundle install --no-cache
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
