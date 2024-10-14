@@ -15,7 +15,7 @@ thumbnail: assets/img/zemishiken.jpg
 [https://forms.gle/thRWkJnHZwQU56rJ7](https://forms.gle/thRWkJnHZwQU56rJ7)
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0 w-50">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/zemi-shinjosho-qr-code.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
