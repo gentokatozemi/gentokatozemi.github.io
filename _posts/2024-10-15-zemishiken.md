@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 2025年度ゼミ生の第1次募集について
-date: 2024-10-15 08:00:00
+date: 2024-10-15 00:00:00
 description: ゼミ生募集の概要と身上書の提出リンクをお知らせします。
 tags: ゼミ生募集
 categories: 
@@ -15,7 +15,7 @@ thumbnail: assets/img/zemishiken.jpg
 [https://forms.gle/thRWkJnHZwQU56rJ7](https://forms.gle/thRWkJnHZwQU56rJ7)
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0 w-50">
         {% include figure.liquid loading="eager" path="assets/img/zemi-shinjosho-qr-code.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
