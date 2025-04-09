@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 学術文献の探し方とまとめ方
-description: Google ScholarとZoteroを活用しよう（2024年7月18日更新）
+description: Google ScholarとZoteroを活用しよう（2025年4月9日更新）
 img: assets/img/Research paper-cuate.png
 importance: 2
 category: work
@@ -87,10 +87,85 @@ giscus_comments: false
 
 [Zotero](https://www.zotero.org)は、見つけた論文情報を管理するのに非常に便利なプラットフォーム／アプリです。これを使えば、書誌情報と論文PDFを一元的に管理でき、さらにその情報を、自分の論文執筆時にすぐに使える形でエクスポートすることができます。
 
-なお、さらにZoteroを便利に使うために、いくつかのオプショナルな機能を追加することをおすすめします。
+まずは[Zoteroのウェブサイト](https://www.zotero.org)から、アカウント登録をしましょう。アカウント登録すると、複数のPCで書誌情報を同期したり、他の人と書誌情報を共有したり、便利な機能が使えるようになります。
 
-- まずは、[Zotero Connector](https://www.zotero.org/download/connectors)です。これはブラウザのプラグインで、出版社のウェブサイトやJSTORから、書誌情報（および取得可能な場合は論文PDF）を直接Zoteroに取り込むことができます。
+アカウント登録をしたら、ZoteroのアプリをPCにインストールしましょう。「Download」ボタンを押してインストール・ファイルをダウンロードし、指示に従ってください。
 
-- ファイル管理には、[ZotFile](https://zotfile.com)の使用をおすすめします。この機能を使えば、一貫した名前と場所に論文関連ファイルを置けます。
+インストールが終わったら、さらにZoteroを便利に使うために、いくつかのオプショナルな機能・設定を追加することをおすすめします。
 
-- LaTeX（Overleaf）を使う場合は、[Better BibTex for Zotero](https://retorque.re/zotero-better-bibtex/)の導入がおすすめです。これで、LaTeX用の書誌情報ファイルを適切に出力できます。
+### Zotero Connector
+
+[Zotero Connector](https://www.zotero.org/download/connectors)は、ブラウザのプラグインで、出版社のウェブサイトやJSTORから、書誌情報（および取得可能な場合は論文PDF）を直接Zoteroに取り込むことができます。
+
+このプラグインを導入すると、論文が掲載されているサイトにアクセスした際に、下のようなアイコンがブラウザの右上に表示されます。このアイコンをクリックすると、利用可能な書誌情報が自動でZoteroの（現状開いている）ライブラリに取り込まれます。
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/zotero_connector.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div><br>
+
+このプラグインは、Google Scholarなどの検索サイトからでも使えますが、多くの場合、出版社のサイトの方が取り出せる情報が多いので、そちらでの利用をおすすめします。さらに、論文PDFにアクセスできるサイトの場合は、論文PDFも自動で書誌情報に紐付けて取り込んでくれます。
+
+### 論文ファイル保存場所設定
+
+Zoteroは、各書誌情報を論文のPDFファイルなどと紐付けて、そのファイルを開いてコメントをつけたりすることもできます。便利な機能ですが、元の論文ファイルの保存場所がバラバラになっていると、間違ってファイルを消してしまったり、PCを買い替えたりしたときに、紐付けが切れてしまうことになります。
+
+<b>ファイルの保存場所が混乱するのを防ぐために、論文を保存するフォルダを決めて、そのフォルダにあるファイルにのみZoteroに紐付ける</b>、という設定をしておくと良いでしょう。さらに、そのフォルダをクラウド（Google Driveなど）上に設置しておくと、複数のPC間で文献ファイルを共有することも可能になります。具体的には以下の手順を踏みます。
+
+1. Edit -> Settings -> Advanced -> Files and Folders -> Linked Attachment Base Directory から、<b>Base Directoryとあるところに任意のフォルダを指定</b>します。このフォルダが、論文保存フォルダになります。Zoteroは、このフォルダ内にあるファイルと書誌情報を相対パスで紐付けます（Zotero Connectorで自動ダウンロードされたファイルもここに保存されます）。PCを変えたら、フォルダごとコピーして、この設定をし直せばいいですし、任意のフォルダを、ローカルのPCにマウントされたクラウド上のフォルダへのパスにする（One Drive, Dropbox, Google Driveなど）と、複数のPC上で紐付けを共有することもできます。
+
+2. 事後的にファイルを書誌情報と紐付けたい場合は、書誌情報を右クリックして、<b>Add Attachmentから、Fileをクリック</b>します。その先で紐付けたいファイルを選んで開くと、そのファイルが自動的にBase Directoryにコピーされてから相対パスで紐付けられることになります。ここで、Linked Fileをクリックしてしまうと、元ファイルをコピーしないまま、絶対パスで紐付けてしまうことになるので注意してください。
+
+3. 紐付けられているPDFファイルはZoteroで直接開けますが、元ファイルを直接参照したい場合は、書誌情報を右クリックしてShow Fileをクリックすると、別ウィンドウで保存場所を開いてくれます。
+
+<!-- - ファイル管理には、[ZotMoov](https://github.com/wileyyugioh/zotmoov/releases/tag/1.2.19)の使用をおすすめします。この機能を使えば、一貫した名前と場所に論文関連ファイルを置けます。 -->
+
+### 書誌情報のWeb同期
+
+Zoteroのアカウントを持っているならば、書誌情報をオンライン同期することができます。この機能は、複数のPCを持っている場合、ブラウザから書誌情報をチェックしたい場合に便利です。
+
+Edit -> Settings -> Sync -> Data Syncingから、同期するアカウントにログインします。<b>Sync full-text contentと、File Synckingの下にある、Sync attachment files...のチェックは外しておく</b>と良いでしょう。チェックがついていると、紐付けられたファイルまでオンラインに同期することになりますが、オンライン上のZotero Storageは無料で使える容量が大きくなく、すぐに一杯になってしまう可能性があります。紐付けられたファイルは、前節の方法を使って、別のクラウドドライブ上で管理するのがおすすめです。
+
+### 簡易的な書誌情報の出力
+
+Zoteroは、参考文献リストの様な形式で、簡易的に書誌情報を出力できます。具体的には、書誌情報を選択した上で、右クリックし、Create bibliography from itemをクリックします。引用スタイルは、とりあえず、Chicago Manual of Style 17th edition (author-date)を使用しておけば十分でしょう。
+
+### Citation Keyと紐付けファイル名管理（BetterBibTex）
+
+[Better BibTex for Zotero](https://retorque.re/zotero-better-bibtex/)は、LaTeX（Overleaf）とZoteroを組み合わせて使うときに、非常に便利なツールです。LaTeXを使わない場合でも、Citation Keyと呼ばれる書誌情報IDをカスタマイズできるので、書誌情報や紐付けファイルを自分のスタイルで効率的に管理できます。
+
+Better BibTex for Zoteroを使う際には、[このページ](https://github.com/retorquere/zotero-better-bibtex/releases)に行って、最新バージョンの.xpiファイルをダウンロードしてください。次に、Zoteroのメニューから、Tools -> Pluginsに進み、画面の右上にある歯車アイコンをクリックし、Install Plugin from Fileをクリックすると、インストールが行われます。インストールが終わったら、Enabledのステータスになっていることを確認してください。
+
+Citation Keyというのは、各書誌情報に割り振ることができる識別番号のようなもので、Better BibTexを使うと、ある一定の仕組みに基づいて自動で生成するように設定することができます。LaTeXで文献引用するときにこのCitation Keyを使って引用を行うのですが、それ以外にも、紐付けられたファイルもその名前で保存するように設定することもできます。以下では、[このページ](https://qiita.com/shiro_takeda/items/dfb857e69aa8ed2cc977)を参考に、設定の一例を紹介します（他にも色々設定はできるので、[ここ](https://retorque.re/zotero-better-bibtex/citing/index.html)を参考にいじってみるのもありです。
+
+1. Edit -> Settings -> Better BibTeXに行って、Citation key formula を次のように設定します：<code>auth + "-" + year + "-" + title.splitIdeographs.select(1,4).capitalize</code>。この設定で、Citation Keyは、筆頭著者名-出版年-タイトルの最初４単語（もしくは４文字）で自動生成されるようになります。
+
+2. 同じ設定画面のやや下にあるForce citation key to plain textのチェックを外します。これで、日本語の書誌情報のCitation Keyがそのまま日本語で生成されるようになります。
+
+3. Edit -> Settings -> General -> File Renaming -> Customize Filename Formatをクリックして、Filename Templateのところに、<code>{{ citationKey }}</code>と入力します。これで、自動ダウンロードされた紐付けファイルが、Citation Keyを名前として保存されるようになります。
+
+4. すでに、Base Directoryにある紐付けファイルの名前を、Citation Keyに準じて変更したい場合は、ZoteroのLibrary内で紐付けファイルを右クリックして、Rename File from Parent Metadataをクリックします。
+
+5. 事後的に、Citation Keyを変更したい場合は、書誌情報を右クリックして、Better BibTeX -> Change BibTeX Key から変更できます。同じところから、Pin BibTeX Keyをクリックすると、Citation Keyが自動でアップデートされないように固定できます。
+
+Better BibTeX導入の最終目的は、書誌情報をLaTeX（Overleaf）で使用するために書き出すことです。LaTeX用の書誌情報ファイル（.bib）を出力するには、２種類の方法があります。
+
+1. 書誌情報ライブラリ全体を出力する場合：File -> Export Library から、FormatがBetter BibTeX（もしくはBetter BibLaTeX）になっていることを確認し、OKを押す。オプションはすべて外しておくのが基本的におすすめだが、Bibファイルを特定の保存場所において、常に最新の状態に保ちたい場合は、Keep updatedのチェックを入れておく。
+
+2. 一部の書誌情報のみをbib形式で出力したい場合は、書誌情報を直接選択し、Export Itemsをクリック。後は同じ。
+
+これから先のLaTeXを用いて論文を書く方法は、<b>[このサンプル文書](https://www.overleaf.com/read/pmcmjnwgmxnm#e43140)</b>で説明しています。
+
+### Zotero と Microsoft Word (or Google Docs)
+
+詳しくはここでは触れませんが、ZoteroとWordを接続して、引用を半自動化することも可能です（LaTeXほど正確にはいきませんが）。以下のインストラクションを参考にしてみると良いかもしれません（引用スタイルは、Chicago Manual of Style 17th edition (author-date)を使うことをおすすめします）。
+
+(Word Plugin Instruction) https://www.zotero.org/support/word_processor_plugin_usage
+
+(Google Docs Plugin Instruction) https://www.zotero.org/support/google_docs
+
+
+<!-- https://necostat.hatenablog.jp/?page=1665893965#%E6%96%87%E7%8C%AE%E3%82%92%E5%BC%95%E7%94%A8%E3%81%99%E3%82%8B
+
+https://opentext.ku.edu/zoteroguide/chapter/citing-in-the-zotero-world/ -->
