@@ -1,6 +1,12 @@
-# Rによる無料データの入手と利用
-加藤言人
-2025-04-13
+---
+layout: page
+title: Rによる無料データの入手と利用
+description: 無料で公開されている社会科学データをRに読み込むためのガイド（２０２５年４月１４日更新）
+img: assets/img/Checklist-bro.png
+importance: 1
+category: work
+giscus_comments: false
+---
 
 - [<span class="toc-section-number">1</span> 共通説明](#共通説明)
   - [<span class="toc-section-number">1.1</span> 事前準備](#事前準備)

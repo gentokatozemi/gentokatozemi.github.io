@@ -3,7 +3,7 @@ layout: page
 title: 日本の世論調査データセット
 description: 個票データが公開されている、日本人を対象とした政治学系世論調査のリスト（２０２４年６月３日更新）
 img: assets/img/Checklist-bro.png
-importance: 1
+importance: 4
 category: work
 related_publications: false
 ---

@@ -3,7 +3,7 @@ layout: page
 title: 有名な政治学系ジャーナル
 description: 特に実証政治学分野における著名な政治学ジャーナルのリスト（２０２４年６月３日更新）
 img: assets/img/Research paper-cuate.png
-importance: 2
+importance: 3
 category: work
 giscus_comments: false
 ---
