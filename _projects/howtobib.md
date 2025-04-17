@@ -107,7 +107,7 @@ giscus_comments: false
 
 このプラグインは、Google Scholarなどの検索サイトからでも使えますが、多くの場合、出版社のサイトの方が取り出せる情報が多いので、そちらでの利用をおすすめします。さらに、論文PDFにアクセスできるサイトの場合は、論文PDFも自動で書誌情報に紐付けて取り込んでくれます。
 
-### 論文ファイル保存場所設定
+### 論文ファイル保存場所設定（Zotmoov）
 
 Zoteroは、各書誌情報を論文のPDFファイルなどと紐付けて、そのファイルを開いてコメントをつけたりすることもできます。便利な機能ですが、元の論文ファイルの保存場所がバラバラになっていると、間違ってファイルを消してしまったり、PCを買い替えたりしたときに、紐付けが切れてしまうことになります。
 
@@ -115,11 +115,14 @@ Zoteroは、各書誌情報を論文のPDFファイルなどと紐付けて、�
 
 1. Edit -> Settings -> Advanced -> Files and Folders -> Linked Attachment Base Directory から、<b>Base Directoryとあるところに任意のフォルダを指定</b>します。このフォルダが、論文保存フォルダになります。Zoteroは、このフォルダ内にあるファイルと書誌情報を相対パスで紐付けます（Zotero Connectorで自動ダウンロードされたファイルもここに保存されます）。PCを変えたら、フォルダごとコピーして、この設定をし直せばいいですし、任意のフォルダを、ローカルのPCにマウントされたクラウド上のフォルダへのパスにする（One Drive, Dropbox, Google Driveなど）と、複数のPC上で紐付けを共有することもできます。
 
-2. 事後的にファイルを書誌情報と紐付けたい場合は、書誌情報を右クリックして、<b>Add Attachmentから、Fileをクリック</b>します。その先で紐付けたいファイルを選んで開くと、そのファイルが自動的にBase Directoryにコピーされてから相対パスで紐付けられることになります。ここで、Linked Fileをクリックしてしまうと、元ファイルをコピーしないまま、絶対パスで紐付けてしまうことになるので注意してください。
+2. 続いて、[Zotmoov](https://github.com/wileyyugioh/zotmoov/releases)プラグインをインストールします。 [ここ](https://github.com/wileyyugioh/zotmoov/releases)から、最新版の.xpiファイルをダウンロードしてください。次に、Zoteroのメニューから、Tools -> Pluginsに進み、画面の右上にある歯車アイコンをクリックし、Install Plugin from Fileをクリックすると、インストールが行われます。インストールが終わったら、Enabledのステータスになっていることを確認してください。
 
-3. 紐付けられているPDFファイルはZoteroで直接開けますが、元ファイルを直接参照したい場合は、書誌情報を右クリックしてShow Fileをクリックすると、別ウィンドウで保存場所を開いてくれます。
+3. Edit -> Settings -> Zotmoovに行って、"Directory to Move/Copy Files to"のディレクトリを、上の1で設定したBase Directoryと同じフォルダに設定します。さらに、Other Settingsのところで、File Behaviorが"Move"になっていて、"Automatically Move/Copy Files When Added"のところだけにチェックが入っていることを確認してください。
 
-<!-- - ファイル管理には、[ZotMoov](https://github.com/wileyyugioh/zotmoov/releases/tag/1.2.19)の使用をおすすめします。この機能を使えば、一貫した名前と場所に論文関連ファイルを置けます。 -->
+4. 事後的にファイルを書誌情報と紐付けたい場合は、書誌情報を右クリックして、<b>Add Attachmentから、Fileをクリック</b>します。その先で紐付けたいファイルを選んで開くと、そのファイルが自動的にBase Directoryにコピーされてから相対パスで紐付けられることになります。ここで、Linked Fileをクリックしてしまうと、元ファイルをコピーしないまま、絶対パスで紐付けてしまうことになるので注意してください。
+
+5. 紐付けられているPDFファイルはZoteroで直接開けますが、元ファイルを直接参照したい場合は、書誌情報を右クリックしてShow Fileをクリックすると、別ウィンドウで保存場所を開いてくれます。
+
 
 ### 書誌情報のWeb同期
 
@@ -143,19 +146,28 @@ Citation Keyというのは、各書誌情報に割り振ることができる�
 
 2. 同じ設定画面のやや下にあるForce citation key to plain textのチェックを外します。これで、日本語の書誌情報のCitation Keyがそのまま日本語で生成されるようになります。
 
-3. Edit -> Settings -> General -> File Renaming -> Customize Filename Formatをクリックして、Filename Templateのところに、<code>{{ citationKey }}</code>と入力します。これで、自動ダウンロードされた紐付けファイルが、Citation Keyを名前として保存されるようになります。
+3. Edit -> Settings -> General -> File Renaming -> Customize Filename Formatをクリックして、Filename Templateのところに、<code>\{\{ citationKey \}\}</code>と入力します。これで、自動ダウンロードされた紐付けファイルが、Citation Keyを名前として保存されるようになります。
 
 4. すでに、Base Directoryにある紐付けファイルの名前を、Citation Keyに準じて変更したい場合は、ZoteroのLibrary内で紐付けファイルを右クリックして、Rename File from Parent Metadataをクリックします。
 
 5. 事後的に、Citation Keyを変更したい場合は、書誌情報を右クリックして、Better BibTeX -> Change BibTeX Key から変更できます。同じところから、Pin BibTeX Keyをクリックすると、Citation Keyが自動でアップデートされないように固定できます。
 
-Better BibTeX導入の最終目的は、書誌情報をLaTeX（Overleaf）で使用するために書き出すことです。LaTeX用の書誌情報ファイル（.bib）を出力するには、２種類の方法があります。
+### ZoteroとLaTeX (Overleaf)
+
+Better BibTeX導入の１つの最終目的は、書誌情報をLaTeX（Overleaf）で使用するために書き出すことです。LaTeX用の書誌情報ファイル（.bib）を出力するには、２種類の方法があります。
 
 1. 書誌情報ライブラリ全体を出力する場合：File -> Export Library から、FormatがBetter BibTeX（もしくはBetter BibLaTeX）になっていることを確認し、OKを押す。オプションはすべて外しておくのが基本的におすすめだが、Bibファイルを特定の保存場所において、常に最新の状態に保ちたい場合は、Keep updatedのチェックを入れておく。
 
 2. 一部の書誌情報のみをbib形式で出力したい場合は、書誌情報を直接選択し、Export Itemsをクリック。後は同じ。
 
 これから先のLaTeXを用いて論文を書く方法は、<b>[このサンプル文書](https://www.overleaf.com/read/pmcmjnwgmxnm#e43140)</b>で説明しています。
+
+### ZoteroとQuarto (RStudio)
+
+Rによる統計分析の結果出力と、Zoteroから文献挿入を同時に行ってドキュメントを作成できるツールの1つに[Quarto](https://quarto.org/docs/get-started/)があります。LaTeXよりもハードルが低そうなので、このツールを使って、レポート作成（あわよくば卒論作成）につなげられないか画策中です。別ページで説明を行う予定ですが、フライングして学びたい人は、以下のサイトなどが参考になりそうです。
+
+- [私たちのR](https://www.jaysong.net/RBook/)
+- [Quarto Help, Techincal Writing](https://quarto.org/docs/visual-editor/technical.html)
 
 ### Zotero と Microsoft Word (or Google Docs)
 
