@@ -1,12 +1,6 @@
----
-layout: page
-title: Rによる無料データの入手と利用
-description: 無料で公開されている社会科学データをRに読み込むためのガイド（２０２５年４月１４日更新）
-img: assets/img/Checklist-bro.png
-importance: 1
-category: work
-giscus_comments: false
----
+# Rによる無料データの入手と利用
+加藤言人
+2025-04-13
 
 - [<span class="toc-section-number">1</span> 共通説明](#共通説明)
   - [<span class="toc-section-number">1.1</span> 事前準備](#事前準備)
@@ -122,7 +116,7 @@ giscus_comments: false
 
 ``` r
 ## Ｒスクリプトファイルと同じ場所にする場合
-setwd(setwd(dirname(rstudioapi::getActiveDocumentContext()$path)))
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 ## 自分の好きな場所にする場合
 setwd("MY/FAVORITE/FILE/PATH")
@@ -1212,11 +1206,10 @@ table(dt$SEXA)
   WVS)**](https://www.worldvaluessurvey.org/wvs.jsp).　社会・政治的な価値観に関する多くの設問を含む、古典的な国際比較世論調査で、日本も昔から参加しています。国レベルのデータは、ウェブサイトの
   “Data & Documentation” -\> “Data Download” -\> “Wave X”.
   から、Excel,SPSS,STATA形式のデータがダウンロードできます。ただし、最新データはデータを開く際にエラーが出るという話もあるので、もしトラブルがあった場合は連絡してください。
-- [**International Social Survey Programme (ISSP) **](https://issp.org).
+- [**International Social Survey Programme (ISSP)**](https://issp.org).
   国際的に共通の質問を含めて行われている社会学系世論調査で、日本もJGSSで参加しています。各年によって特定のテーマの質問を含めて行われることが特徴です
   “Data Download”項目から、STATAとSPSS形式でデータが入手できます。
-- [**Comparative Study of Electoral Systems (CSES)
-  **](https://cses.org).
+- [**Comparative Study of Electoral Systems (CSES)**](https://cses.org).
   様々な国での選挙時世論調査の結果を含めた国際共同プロジェクトです。日本も参加しています。“Download
   Data”項目から、SPSS, Stata, CSV形式でデータがダウンロードできます。
 - [**Global Barometer Surveys（GBS)**](https://www.globalbarometer.net).
