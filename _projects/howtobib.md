@@ -146,7 +146,7 @@ Citation Keyというのは、各書誌情報に割り振ることができる�
 
 2. 同じ設定画面のやや下にあるForce citation key to plain textのチェックを外します。これで、日本語の書誌情報のCitation Keyがそのまま日本語で生成されるようになります。
 
-3. Edit -> Settings -> General -> File Renaming -> Customize Filename Formatをクリックして、Filename Templateのところに、<pre>{{ citationKey }}</pre>と入力します。これで、自動ダウンロードされた紐付けファイルが、Citation Keyを名前として保存されるようになります。
+3. Edit -> Settings -> General -> File Renaming -> Customize Filename Formatをクリックして、Filename Templateのところに、$\lbrace \lbrace$ citationKey $\rbrace \rbrace$ と入力します。これで、自動ダウンロードされた紐付けファイルが、Citation Keyを名前として保存されるようになります。
 
 4. すでに、Base Directoryにある紐付けファイルの名前を、Citation Keyに準じて変更したい場合は、ZoteroのLibrary内で紐付けファイルを右クリックして、Rename File from Parent Metadataをクリックします。
 
