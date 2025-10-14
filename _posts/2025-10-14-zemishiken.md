@@ -5,7 +5,7 @@ date: 2025-10-14 07:00:00
 description: 2026年度ゼミ生募集の概要と身上書の提出リンクをお知らせします。
 tags: ゼミ生募集
 categories: 
-thumbnail: assets/img/zemishiken.jpg
+thumbnail: assets/img/zemishiken26.jpg
 ---
 
 加藤言人ゼミでは、2026年度ゼミ生（第2期）の第1次募集を行います。関心がある方は、[専門演習要項](https://github.com/gentokatozemi/gentokatozemi.github.io/blob/master/assets/pdf/gkzemi-yoko-2026.pdf)や、[本ウェブサイト](https://gentokatozemi.github.io)、[インスタグラム](https://www.instagram.com/g.katoseminar_2025)に公開されている情報を確認してください。現代政治の科学的な分析・考察に関心がある方を、幅広くお待ちしています。
