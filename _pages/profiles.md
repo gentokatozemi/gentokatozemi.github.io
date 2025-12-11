@@ -16,6 +16,11 @@ profiles:
     more_info: 
   - align: left
     image: anaguma_profile_junbichu.jpg
+    content: about_cohort02.md
+    image_circular: false # crops the image to make it circular
+    more_info: 
+  - align: left
+    image: cohort01_gp.jpg
     content: about_cohort01.md
     image_circular: false # crops the image to make it circular
     more_info: 
