@@ -2,7 +2,7 @@
 layout: page
 permalink: /works/
 title: WORKS
-description: 教員（および将来的にはゼミ生も！）による研究成果のリスト
+description: 教員およびゼミ生による研究成果のリスト
 nav: true
 nav_order: 5
 ---
