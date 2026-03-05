@@ -301,8 +301,8 @@ display_categories: #["blockquotes"] # these categories will be displayed on the
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: ["Kato","加藤言人"]
-  first_name: ["Gento",""]
+  last_name: ["Kato","加藤言人","稲垣和由","飯尾天翔","田口俊介","杉浦莉沙","越野萌香","菅野尊瑠"]
+  first_name: ["Gento","","","","","","",""]
 
   style: apa
   locale: en
